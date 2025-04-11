@@ -1,7 +1,7 @@
 import React from "react";
 
 // import styles
-import styles from "./Button.module.css";
+import styles from "./Button.css";
 
 // import dependencies
 import {clsx} from "clsx";

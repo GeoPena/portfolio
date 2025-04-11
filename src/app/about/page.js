@@ -7,10 +7,10 @@ export default function About() {
   return (
     <section className="max-w-7xl mx-auto px-4 py-12 flex flex-col-reverse md:flex-row gap-12 justify-center">
       <div className="w-full md:max-w-[464px]">
-        <h1 className="text-5xl font-bold leading-[56px] text-gray-900 max-w-[464px]">
+        <h1 className="text-5xl font-bold leading-[56px] text-gray-900 dark:text-white max-w-[464px]">
           I’m Geo. I live in Provo, where I bring math, education, and technology together.
         </h1>
-        <div className="mt-6 space-y-4 text-gray-700">
+        <div className="mt-6 space-y-4 text-gray-700 dark:text-gray-300">
           <p>
             I am a Colombian educator with over a decade of experience teaching mathematics across different levels, including to students with hearing impairments. I hold a Bachelor's degree in Math Education and a Master of Science in Mathematics, and I'm currently pursuing an Associate Degree in Data Science at Ensign College in Salt Lake City, Utah.
           </p>
@@ -29,7 +29,7 @@ export default function About() {
       <div className="w-full md:max-w-[464px] flex flex-col items-center md:items-start">
         <img src="/GeoPhoto.jpg" alt="Geo" className="rounded-xl w-full max-w-[300px] object-cover" />
 
-        <ul className="mt-6 space-y-2 text-sm text-gray-700">
+        <ul className="mt-6 space-y-2 text-sm text-gray-700 dark:text-gray-300">
           <li className="flex items-center gap-2">
             <a
               href="https://x.com/geovanny84"
