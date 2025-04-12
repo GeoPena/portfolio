@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Mail, BriefcaseBusiness, Zap, Linkedin, Twitter, Github } from 'lucide-react';
+import myImageLoader from '@/image.loader';
 
 export default function Home() {
   const workExperience = [
@@ -52,6 +53,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="mt-10 text-left">
         <Image
+          loader={myImageLoader}
           src="/GeoPhoto.jpg"
           width={80}
           height={80}
@@ -62,18 +64,18 @@ export default function Home() {
           Educator, Data Enthusiast, and Advocate for Accessible Math Education
         </h1>
         <p className="text-gray-600 dark:text-gray-300 mt-4">
-          I’m <strong>Geovanny Peña</strong>, a passionate educator with over a decade of
+          I&apos;m <strong>Geovanny Peña</strong>, a passionate educator with over a decade of
           experience teaching math in Colombia, currently pursuing an Associate Degree in Data
           Science at Ensign College in Salt Lake City.
         </p>
         <p className="text-gray-600 dark:text-gray-300 mt-2">
-          My academic journey includes a Master’s in Mathematical Sciences and a Bachelor’s in
-          Math Education. I've worked as a high school teacher, a government teacher trainer, and
+          My academic journey includes a Master&apos;s in Mathematical Sciences and a Bachelor&apos;s in
+          Math Education. I&apos;ve worked as a high school teacher, a government teacher trainer, and
           currently support students as a Registration Agent at BYU–Pathway.
         </p>
         <p className="text-gray-600 dark:text-gray-300 mt-2">
           I specialize in integrating technology into learning using tools like <strong>Desmos</strong>,{" "}
-          <strong>GeoGebra</strong>, <strong>H5P</strong>, and <strong>Derivita</strong>. I'm also
+          <strong>GeoGebra</strong>, <strong>H5P</strong>, and <strong>Derivita</strong>. I&apos;m also
           building <strong>Math for All LLC</strong>, an initiative to train teachers and provide
           equitable math tools for underserved communities.
         </p>
@@ -153,7 +155,13 @@ export default function Home() {
               {workExperience.map((job, index) => (
                 <li key={index} className="flex justify-between items-center">
                   <div className="flex items-center space-x-3">
-                    <Image src={job.logo} width={24} height={24} alt={`${job.company} Logo`} />
+                    <Image
+                      loader={myImageLoader}
+                      src={job.logo}
+                      width={24}
+                      height={24}
+                      alt={`${job.company} Logo`}
+                    />
                     <div>
                       <span className="font-semibold">{job.company}</span>
                       <p className="text-gray-600 dark:text-gray-300 text-xs">{job.role}</p>
@@ -175,7 +183,13 @@ export default function Home() {
               {skills.map((skill, index) => (
                 <div key={index}>
                   <div className="flex items-center space-x-3">
-                    <Image src={skill.logo} width={24} height={24} alt={`${skill.name} Logo`} />
+                    <Image
+                      loader={myImageLoader}
+                      src={skill.logo}
+                      width={24}
+                      height={24}
+                      alt={`${skill.name} Logo`}
+                    />
                     <p className="text-xs font-semibold">{skill.name}</p>
                   </div>
                   <div className="w-full bg-gray-200 h-2 rounded-full overflow-hidden mt-1">
