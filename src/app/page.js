@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Mail, BriefcaseBusiness, Zap, Linkedin, Twitter, Github } from 'lucide-react';
-import myImageLoader from '@/image.loader';
 
 export default function Home() {
   const workExperience = [
@@ -53,7 +52,6 @@ export default function Home() {
       {/* Hero Section */}
       <section className="mt-10 text-left">
         <Image
-          loader={myImageLoader}
           src="/GeoPhoto.jpg"
           width={80}
           height={80}
@@ -109,7 +107,7 @@ export default function Home() {
           <Article
             date="September 2018"
             title="Some Characterization of Supersolubility"
-            description="A meritorious master's thesis exploring concepts in Group Theory using GAP software. Developed as part of my MSc in Mathematics at Universidad del Atlántico."
+            description="A meritorious master&apos;s thesis exploring concepts in Group Theory using GAP software. Developed as part of my MSc in Mathematics at Universidad del Atlántico."
             href="/thesis.pdf"
           />
           <Article
@@ -121,7 +119,7 @@ export default function Home() {
           <Article
             date="2021 (Colombia)"
             title="Geometry and Movements"
-            description="A professional development session delivered to elementary math teachers through the Colombian Ministry of Education's 'Todos a Aprender' program."
+            description="A professional development session delivered to elementary math teachers through the Colombian Ministry of Education&apos;s &quot;Todos a Aprender&quot; program."
             href="/GeometryPTA.pdf"
           />
         </section>
@@ -155,13 +153,7 @@ export default function Home() {
               {workExperience.map((job, index) => (
                 <li key={index} className="flex justify-between items-center">
                   <div className="flex items-center space-x-3">
-                    <Image
-                      loader={myImageLoader}
-                      src={job.logo}
-                      width={24}
-                      height={24}
-                      alt={`${job.company} Logo`}
-                    />
+                    <Image src={job.logo} width={24} height={24} alt={`${job.company} Logo`} />
                     <div>
                       <span className="font-semibold">{job.company}</span>
                       <p className="text-gray-600 dark:text-gray-300 text-xs">{job.role}</p>
@@ -183,13 +175,7 @@ export default function Home() {
               {skills.map((skill, index) => (
                 <div key={index}>
                   <div className="flex items-center space-x-3">
-                    <Image
-                      loader={myImageLoader}
-                      src={skill.logo}
-                      width={24}
-                      height={24}
-                      alt={`${skill.name} Logo`}
-                    />
+                    <Image src={skill.logo} width={24} height={24} alt={`${skill.name} Logo`} />
                     <p className="text-xs font-semibold">{skill.name}</p>
                   </div>
                   <div className="w-full bg-gray-200 h-2 rounded-full overflow-hidden mt-1">
